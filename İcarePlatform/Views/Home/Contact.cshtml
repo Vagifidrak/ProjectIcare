@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+    <div class="Contact">
+        <img style="width: 100%; height: 25em; object-fit: cover;" src="~/PublicFront/Vendors/image/2023.jpg" alt="Alternate Text" />
+        <div class="container">
+            <div class="row">
+                <!--Section: Contact -->
+                <section class="mb-4">
+                    <!--Section heading-->
+                    <h2 style="color:#0a2970"  class="h1-responsive font-weight-bold text-center my-4">Bizimlə Əlaqə</h2>
+                    <!--Section description-->
+                    <p style="font-weight:600; font-size:large" class="text-center w-responsive mx-auto mb-5">
+                        Hər hansı bir sualınız var? Xahiş edirik birbaşa bizimlə əlaqə saxlamaqdan çəkinməyin. Komandamız sizə kömək etmək üçün bir neçə saat ərzində geri qayıdır.
+                    </p>
+
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-7 mb-md-0 mb-5">
+                            <form id="contact-form" name="contact-form" action="" method="POST">
+
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <label for="name" class="m-1">Adınız</label>
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="Dəyərli İstifadəçi">
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+                                    <!--Grid column-->
+                                    <div class="col-md-6">
+                                        <div class="md-form mb-0">
+                                            <label for="email" class="m-1">Mailiniz</label>
+                                            <input type="text" id="email" name="email" class="form-control" placeholder="İstifadəçi@gmail.com">
+                                        </div>
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+                                <!--Grid row-->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="md-form mb-0">
+                                            <label for="subject" class="m-1">Başlıq</label>
+                                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Vacibliyini bildirin (Məs:Təcili)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+                                <!--Grid row-->
+                                <div class="row">
+
+                                    <!--Grid column-->
+                                    <div class="col-md-12">
+
+                                        <div class="md-form">
+                                            <label for="message" class="m-1">Sizin mesajınız</label>
+                                            <textarea type="text" id="message" name="message" rows="6" class="form-control md-textarea" placeholder="Sizə necə kömək edə bilərik ?"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!--Grid row-->
+
+                            </form>
+
+                            <div class="text-center text-md-left">
+                                <button style="background-color:#0a2970; color:white"  class="btn mt-3" onclick="document.getElementById('contact-form').submit();">Tezliklə sizinlə əlaqə quracıyıq</button>
+                            </div>
+                            <div class="status"></div>
+                        </div>
+                        <!--Grid column-->
+                        <!--Grid column-->
+                        <div class="col-md-5 text-center">
+                            <ul class="list-unstyled mb-0 pt-5">
+                                <li>
+                                    <i style="color:#0a2970" class="fas fa-map-marker-alt fa-2x"></i>
+                                    <p>Bakı. Azərbaycan</p>
+                                </li>
+
+                                <li>
+                                    <i style="color:#0a2970" class="fas fa-phone mt-4 fa-2x"></i>
+                                    <p>+994 55 321 00 07</p>
+                                </li>
+
+                                <li>
+                                    <i style="color:#0a2970" class="fas fa-envelope mt-4 fa-2x"></i>
+                                    <p>vagifibra@gmail.com</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+
+                </section>
+                <!--Section: Contact-->
+            </div>
+        </div>
+    </div>

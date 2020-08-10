@@ -1,0 +1,161 @@
+
+ /*  ============
+    NabBar Start
+  ============ */
+#NavBar{
+    margin-top: 20px;
+
+    .MenuList ul, .MenuEnter ul{
+        display: flex;
+        justify-content: end;
+        
+        li{
+            list-style: none;
+            margin: 3px;
+            background-color: #1642AC;
+            padding: 5px 20px;
+            border-radius: 10px 0 10px 0;
+            a{
+                color: #ffffff;
+                text-decoration: none;
+
+            }
+        }
+    }
+    .MenuEnter ul li{
+        background-color: #0a2970;
+    }
+    
+}
+
+
+.Description{
+    .Information{
+    margin-top: 40px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1642AC;
+    }
+    
+
+    .FlexImg{
+        position: relative;
+    
+            img{
+            width: 100%;
+            position: fixed;
+            margin: -10rem;
+            z-index: -9999;
+        }
+    }
+}
+
+/* =============
+NavBar End
+============== */
+
+/* =============
+Services Start
+============== */
+
+ #Services .ServicesName h5 {
+  font-size: 40px;
+  font-weight: 700;
+  padding: 20px;
+  font-style: italic;
+  color: #191970;
+}
+
+ #Services .serv {
+  background-color: #191970;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 2px;
+  height: 80px;
+}
+
+ #Services .serv .SevricesType {
+
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+ #Services .serv .SevricesType img,
+ #Services .serv .SevricesType a {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+ #Services .serv:hover {
+  background-color: #ffffff;
+}
+
+ #Services .serv:hover .SevricesType a {
+  color: #191970;
+}
+
+/* ==============
+ Services End 
+ ================= */
+
+ /* ==============
+Footer start
+ ================= */
+ .FooterSec 
+ {
+    .AppStore {
+    background-color: #191970;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+
+        .AppStoreInfo {
+        text-align: left;
+        padding: 20px;
+
+            h6 {
+            color: #ffffff;
+            }
+        }
+
+        .PhoneImg {
+        right: 10rem;
+        position: absolute;
+        width: 10rem;
+        top: -5rem;
+        }
+
+    }
+}
+/* ==============
+ Footer End 
+================= */
+
+
+
+/* ==============
+AboutUs Start
+ ================= */
+#AboutUs {
+    img {
+        width: 100%;
+        height: 25em;
+        object-fit: cover;
+    }
+}
+.AboutDesc {
+    .DescHead {
+        margin-top: 20px;
+        
+    }
+}
+/* ==============
+AboutUs End 
+ ================= */
+
+
+
+ 

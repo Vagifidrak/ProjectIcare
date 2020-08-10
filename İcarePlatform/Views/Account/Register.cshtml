@@ -1,0 +1,121 @@
+﻿@model İcarePlatform.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+
+@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <h4>Create a new account.</h4>
+        <hr />
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" class="btn btn-default" value="Register" />
+            </div>
+        </div>
+    }
+
+*@
+
+
+<!-- ============
+            Registration
+            ============ -->
+
+
+<section id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header">
+                                <h3 class="text-center font-weight-light my-4">Hesab Yaradın</h3>
+                            </div>
+                            <div class="card-body">
+                                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary("", new { @class = "text-danger" })
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="inputFirstName">Adınız</label>
+                                                    <input class="form-control py-4" id="inputFirstName" type="text"
+                                                           placeholder="Adınızı daxil edin" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="small mb-1"
+                                                           for="inputLastName">Soyadınız</label>
+                                                    <input class="form-control py-4" id="inputLastName" type="text"
+                                                           placeholder="Soyadınızı daxil edin" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control  py-4" })
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control  py-4" })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label" })
+                                                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control py-4" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mt-4 mb-0">
+                                            <input type="submit" class="btn btn-primary" value="Register" />
+                                        </div>
+
+                                    </form>
+                                }
+                            </div>
+                            <div class="card-footer text-center">
+                                <div class="small">
+                                    <a href="https://localhost:44398/Account/Login">
+                                        Bir hesabınız var? Girişə
+                                        gedin
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</section>
+@section Logo{
+    <img style="width:15%" src="~/PublicFront/Vendors/image/logo.png">
+}

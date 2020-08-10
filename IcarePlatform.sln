@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "İcarePlatform.web", "İcarePlatform\İcarePlatform.web.csproj", "{21A0A734-2E0C-431D-B3D2-EF5A0976478D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21A0A734-2E0C-431D-B3D2-EF5A0976478D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A0A734-2E0C-431D-B3D2-EF5A0976478D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A0A734-2E0C-431D-B3D2-EF5A0976478D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A0A734-2E0C-431D-B3D2-EF5A0976478D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DDE44F5-0F74-453A-A9FB-52F2DE2C58E4}
+	EndGlobalSection
+EndGlobal
