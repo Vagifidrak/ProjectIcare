@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="İcareDBV1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AboutUs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" />
+    <Property Name="UrlImg" Type="nvarchar(max)" />
+    <Property Name="header" Type="nvarchar" MaxLength="250" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="FIN" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="11" />
+    <Property Name="AsanImzaNumber" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="ChatMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="20" />
+    <Property Name="DescriptionMessage" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ContactMe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Office" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number" Type="nvarchar" MaxLength="19" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="ImgIcon" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContractType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContractLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="EstateId" Type="int" />
+    <Property Name="RentalId" Type="nvarchar" MaxLength="128" />
+    <Property Name="ContractDeadline" Type="datetime" Nullable="false" />
+    <Property Name="SignContract" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="RentPrice" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EstateCode" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="UserOwnerId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="YourAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CityId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstateImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="EstateId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EstateSpesification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="EstateId" Type="int" />
+  </EntityType>
+  <EntityType Name="MessageChat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="RentalUserId" Type="int" />
+    <Property Name="OwnerUserId" Type="int" />
+    <Property Name="FileUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="OrderHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" />
+    <Property Name="PayTypeId" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerId" Type="int" />
+    <Property Name="CustomerFullName" Type="nvarchar" MaxLength="150" />
+    <Property Name="CustomerPhone" Type="nvarchar" MaxLength="15" />
+    <Property Name="IsGuestOrder" Type="bit" />
+    <Property Name="PromoId" Type="int" />
+    <Property Name="PlacedOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PayType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PayTypeName" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Photos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Url" Type="nvarchar" MaxLength="500" />
+    <Property Name="UserId" Type="int" />
+  </EntityType>
+  <Association Name="FK_Contract_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="0..1" />
+    <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Estate_Cities">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+    <End Role="Estate" Type="Self.Estate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Estate">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstateImage_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="1" />
+    <End Role="EstateImage" Type="Self.EstateImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EstateImage">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstateSpesification_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="0..1" />
+    <End Role="EstateSpesification" Type="Self.EstateSpesification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EstateSpesification">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderHistory_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderHistory">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Orders">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_PayType">
+    <End Role="PayType" Type="Self.PayType" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PayType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="PayTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="İcareDBV1ModelStoreContainer">
+    <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChatMessage" EntityType="Self.ChatMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactMe" EntityType="Self.ContactMe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contract" EntityType="Self.Contract" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estate" EntityType="Self.Estate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstateImage" EntityType="Self.EstateImage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstateSpesification" EntityType="Self.EstateSpesification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MessageChat" EntityType="Self.MessageChat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderHistory" EntityType="Self.OrderHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderItem" EntityType="Self.OrderItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayType" EntityType="Self.PayType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Contract_Estate" Association="Self.FK_Contract_Estate">
+      <End Role="Estate" EntitySet="Estate" />
+      <End Role="Contract" EntitySet="Contract" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Estate_Cities" Association="Self.FK_Estate_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Estate" EntitySet="Estate" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstateImage_Estate" Association="Self.FK_EstateImage_Estate">
+      <End Role="Estate" EntitySet="Estate" />
+      <End Role="EstateImage" EntitySet="EstateImage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstateSpesification_Estate" Association="Self.FK_EstateSpesification_Estate">
+      <End Role="Estate" EntitySet="Estate" />
+      <End Role="EstateSpesification" EntitySet="EstateSpesification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderHistory_Orders" Association="Self.FK_OrderHistory_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderHistory" EntitySet="OrderHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Orders" Association="Self.FK_OrderItem_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_PayType" Association="Self.FK_OrderItem_PayType">
+      <End Role="PayType" EntitySet="PayType" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="İcareDBV1ModelStoreContainer" CdmEntityContainer="İcareDB">
+    <EntitySetMapping Name="AboutUs">
+      <EntityTypeMapping TypeName="İcareDBV1Model.AboutU">
+        <MappingFragment StoreEntitySet="AboutUs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="UrlImg" ColumnName="UrlImg" />
+          <ScalarProperty Name="header" ColumnName="header" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="İcareDBV1Model.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="İcareDBV1Model.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="İcareDBV1Model.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="İcareDBV1Model.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FIN" ColumnName="FIN" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="AsanImzaNumber" ColumnName="AsanImzaNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChatMessages">
+      <EntityTypeMapping TypeName="İcareDBV1Model.ChatMessage">
+        <MappingFragment StoreEntitySet="ChatMessage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="İcareDBV1Model.City">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="İcareDBV1Model.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DescriptionMessage" ColumnName="DescriptionMessage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactMes">
+      <EntityTypeMapping TypeName="İcareDBV1Model.ContactMe">
+        <MappingFragment StoreEntitySet="ContactMe">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Office" ColumnName="Office" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="ImgIcon" ColumnName="ImgIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contracts">
+      <EntityTypeMapping TypeName="İcareDBV1Model.Contract">
+        <MappingFragment StoreEntitySet="Contract">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ContractType" ColumnName="ContractType" />
+          <ScalarProperty Name="ContractLink" ColumnName="ContractLink" />
+          <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+          <ScalarProperty Name="RentalId" ColumnName="RentalId" />
+          <ScalarProperty Name="ContractDeadline" ColumnName="ContractDeadline" />
+          <ScalarProperty Name="SignContract" ColumnName="SignContract" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="RentPrice" ColumnName="RentPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estates">
+      <EntityTypeMapping TypeName="İcareDBV1Model.Estate">
+        <MappingFragment StoreEntitySet="Estate">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EstateCode" ColumnName="EstateCode" />
+          <ScalarProperty Name="UserOwnerId" ColumnName="UserOwnerId" />
+          <ScalarProperty Name="YourAddress" ColumnName="YourAddress" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CityId" ColumnName="CityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstateImages">
+      <EntityTypeMapping TypeName="İcareDBV1Model.EstateImage">
+        <MappingFragment StoreEntitySet="EstateImage">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstateSpesifications">
+      <EntityTypeMapping TypeName="İcareDBV1Model.EstateSpesification">
+        <MappingFragment StoreEntitySet="EstateSpesification">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="EstateId" ColumnName="EstateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageChats">
+      <EntityTypeMapping TypeName="İcareDBV1Model.MessageChat">
+        <MappingFragment StoreEntitySet="MessageChat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="RentalUserId" ColumnName="RentalUserId" />
+          <ScalarProperty Name="OwnerUserId" ColumnName="OwnerUserId" />
+          <ScalarProperty Name="FileUrl" ColumnName="FileUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderHistories">
+      <EntityTypeMapping TypeName="İcareDBV1Model.OrderHistory">
+        <MappingFragment StoreEntitySet="OrderHistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderItems">
+      <EntityTypeMapping TypeName="İcareDBV1Model.OrderItem">
+        <MappingFragment StoreEntitySet="OrderItem">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="PayTypeId" ColumnName="PayTypeId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="İcareDBV1Model.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="CustomerFullName" ColumnName="CustomerFullName" />
+          <ScalarProperty Name="CustomerPhone" ColumnName="CustomerPhone" />
+          <ScalarProperty Name="IsGuestOrder" ColumnName="IsGuestOrder" />
+          <ScalarProperty Name="PromoId" ColumnName="PromoId" />
+          <ScalarProperty Name="PlacedOn" ColumnName="PlacedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayTypes">
+      <EntityTypeMapping TypeName="İcareDBV1Model.PayType">
+        <MappingFragment StoreEntitySet="PayType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PayTypeName" ColumnName="PayTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="İcareDBV1Model.Photo">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="İcareDBV1Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

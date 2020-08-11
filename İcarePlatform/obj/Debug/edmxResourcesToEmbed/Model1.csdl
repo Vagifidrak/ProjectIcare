@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="İcareDBV1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AboutU">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UrlImg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="header" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUsers" Relationship="Self.AspNetUserRoles" FromRole="AspNetRoles" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FIN" Type="String" MaxLength="7" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="SerialNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="AsanImzaNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="ChatMessage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Estates" Relationship="Self.FK_Estate_Cities" FromRole="Cities" ToRole="Estate" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DescriptionMessage" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ContactMe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Office" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="19" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImgUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ImgIcon" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Contract">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContractType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContractLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="EstateId" Type="Int32" />
+    <Property Name="RentalId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ContractDeadline" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SignContract" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="RentPrice" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Estate" Relationship="Self.FK_Contract_Estate" FromRole="Contract" ToRole="Estate" />
+  </EntityType>
+  <EntityType Name="Estate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EstateCode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserOwnerId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="YourAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="City" Relationship="Self.FK_Estate_Cities" FromRole="Estate" ToRole="Cities" />
+    <NavigationProperty Name="Contracts" Relationship="Self.FK_Contract_Estate" FromRole="Estate" ToRole="Contract" />
+    <NavigationProperty Name="EstateImages" Relationship="Self.FK_EstateImage_Estate" FromRole="Estate" ToRole="EstateImage" />
+    <NavigationProperty Name="EstateSpesifications" Relationship="Self.FK_EstateSpesification_Estate" FromRole="Estate" ToRole="EstateSpesification" />
+  </EntityType>
+  <EntityType Name="EstateImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EstateId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Estate" Relationship="Self.FK_EstateImage_Estate" FromRole="EstateImage" ToRole="Estate" />
+  </EntityType>
+  <EntityType Name="EstateSpesification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EstateId" Type="Int32" />
+    <NavigationProperty Name="Estate" Relationship="Self.FK_EstateSpesification_Estate" FromRole="EstateSpesification" ToRole="Estate" />
+  </EntityType>
+  <EntityType Name="MessageChat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+    <Property Name="RentalUserId" Type="Int32" />
+    <Property Name="OwnerUserId" Type="Int32" />
+    <Property Name="FileUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="OrderHistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="OrderDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_OrderHistory_Orders" FromRole="OrderHistory" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="OrderItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" />
+    <Property Name="PayTypeId" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_OrderItem_Orders" FromRole="OrderItem" ToRole="Orders" />
+    <NavigationProperty Name="PayType" Relationship="Self.FK_OrderItem_PayType" FromRole="OrderItem" ToRole="PayType" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="CustomerFullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="IsGuestOrder" Type="Boolean" />
+    <Property Name="PromoId" Type="Int32" />
+    <Property Name="PlacedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="OrderHistories" Relationship="Self.FK_OrderHistory_Orders" FromRole="Orders" ToRole="OrderHistory" />
+    <NavigationProperty Name="OrderItems" Relationship="Self.FK_OrderItem_Orders" FromRole="Orders" ToRole="OrderItem" />
+  </EntityType>
+  <EntityType Name="PayType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayTypeName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderItems" Relationship="Self.FK_OrderItem_PayType" FromRole="PayType" ToRole="OrderItem" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Url" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Estate_Cities">
+    <End Role="Cities" Type="Self.City" Multiplicity="1" />
+    <End Role="Estate" Type="Self.Estate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Estate">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Contract_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="0..1" />
+    <End Role="Contract" Type="Self.Contract" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Contract">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstateImage_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="1" />
+    <End Role="EstateImage" Type="Self.EstateImage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EstateImage">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstateSpesification_Estate">
+    <End Role="Estate" Type="Self.Estate" Multiplicity="0..1" />
+    <End Role="EstateSpesification" Type="Self.EstateSpesification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estate">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EstateSpesification">
+        <PropertyRef Name="EstateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderHistory_Orders">
+    <End Role="Orders" Type="Self.Order" Multiplicity="1" />
+    <End Role="OrderHistory" Type="Self.OrderHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderHistory">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Orders">
+    <End Role="Orders" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="OrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_PayType">
+    <End Role="PayType" Type="Self.PayType" Multiplicity="0..1" />
+    <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PayType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="PayTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="*" />
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="İcareDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AboutUs" EntityType="Self.AboutU" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="ChatMessages" EntityType="Self.ChatMessage" />
+    <EntitySet Name="Cities" EntityType="Self.City" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="ContactMes" EntityType="Self.ContactMe" />
+    <EntitySet Name="Contracts" EntityType="Self.Contract" />
+    <EntitySet Name="Estates" EntityType="Self.Estate" />
+    <EntitySet Name="EstateImages" EntityType="Self.EstateImage" />
+    <EntitySet Name="EstateSpesifications" EntityType="Self.EstateSpesification" />
+    <EntitySet Name="MessageChats" EntityType="Self.MessageChat" />
+    <EntitySet Name="OrderHistories" EntityType="Self.OrderHistory" />
+    <EntitySet Name="OrderItems" EntityType="Self.OrderItem" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="PayTypes" EntityType="Self.PayType" />
+    <EntitySet Name="Photos" EntityType="Self.Photo" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Estate_Cities" Association="Self.FK_Estate_Cities">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Estate" EntitySet="Estates" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Contract_Estate" Association="Self.FK_Contract_Estate">
+      <End Role="Estate" EntitySet="Estates" />
+      <End Role="Contract" EntitySet="Contracts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstateImage_Estate" Association="Self.FK_EstateImage_Estate">
+      <End Role="Estate" EntitySet="Estates" />
+      <End Role="EstateImage" EntitySet="EstateImages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstateSpesification_Estate" Association="Self.FK_EstateSpesification_Estate">
+      <End Role="Estate" EntitySet="Estates" />
+      <End Role="EstateSpesification" EntitySet="EstateSpesifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderHistory_Orders" Association="Self.FK_OrderHistory_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderHistory" EntitySet="OrderHistories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Orders" Association="Self.FK_OrderItem_Orders">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_PayType" Association="Self.FK_OrderItem_PayType">
+      <End Role="PayType" EntitySet="PayTypes" />
+      <End Role="OrderItem" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
