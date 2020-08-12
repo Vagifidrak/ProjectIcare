@@ -20,14 +20,13 @@ namespace İcarePlatform.Controllers
 
             return View();
         }
-
+        //Contact for information
         public ActionResult Contact()
         {
             ViewBag.Message = "Əlaqə";
 
             return View();
         }
-
         [HttpPost]
         public ActionResult Contact(string name=null, string email = null, string subject=null, string message = null)
         {
@@ -37,12 +36,12 @@ namespace İcarePlatform.Controllers
                 WebMail.EnableSsl = true;
                 WebMail.UserName = "admin@e-icare.az";
                 WebMail.Password = "asankira2020";
-                WebMail.SmtpPort = 465;
+                WebMail.SmtpPort = 587;
                 WebMail.Send("admin@e-icare.az", subject, email + "-" + message);
                 TempData["contact"] = "Mesajınız uğurla göndərildi";
             }
             else
-            {
+            {   
                 TempData["contact"] = "Xəta baş verdi təkrar yoxlayın";
             }
             return View();

@@ -13,69 +13,52 @@
                 <p style="font-weight:600; font-size:large" class="text-center w-responsive mx-auto mb-5">
                     Hər hansı bir sualınız var? Xahiş edirik birbaşa bizimlə əlaqə saxlamaqdan çəkinməyin. Komandamız sizə kömək etmək üçün bir neçə saat ərzində geri qayıdır.
                 </p>
-
                 <div class="row">
-
-                    <!--Grid column-->
                     <div class="col-md-7 mb-md-0 mb-5">
-                        <form id="contact-form" name="contact-form" action="~/Home/Contact" method="post"   >
-
-                            <!--Grid row-->
+                        <form id="contact-form" name="contact-form" action="/Home/Contact" method="post">
                             <div class="row">
-
-                                <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <label for="name" class="m-1">Adınız</label>
                                         <input type="text" id="name" name="name" class="form-control" placeholder="Dəyərli İstifadəçi">
                                     </div>
                                 </div>
-                                <!--Grid column-->
-                                <!--Grid column-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
                                         <label for="email" class="m-1">Mailiniz</label>
                                         <input type="email" id="email" name="email" class="form-control" placeholder="İstifadəçi@gmail.com">
                                     </div>
                                 </div>
-                                <!--Grid column-->
-
                             </div>
-                            <!--Grid row-->
-                            <!--Grid row-->
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="md-form mb-0">
                                         <label for="subject" class="m-1">Başlıq</label>
-                                        <input type="text" id="subject" value="send" name="subject" class="form-control" placeholder="Vacibliyini bildirin (Məs:Təcili)">
+                                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Vacibliyini bildirin (Məs:Təcili)">
                                     </div>
                                 </div>
                             </div>
-                            <!--Grid row-->
-                            <!--Grid row-->
                             <div class="row">
-
-                                <!--Grid column-->
                                 <div class="col-md-12">
-
                                     <div class="md-form">
                                         <label for="message" class="m-1">Sizin mesajınız</label>
                                         <textarea type="text" id="message" name="message" rows="6" class="form-control md-textarea" placeholder="Sizə necə kömək edə bilərik ?"></textarea>
                                     </div>
-
                                 </div>
                             </div>
-                            <!--Grid row-->
-
+                            <div class="text-center text-md-left">
+                                <button style="background-color:#0a2970; color:white" type="submit" name="nameSub" class="btn mt-3" onclick="document.getElementById('contact-form').submit();">Tezliklə sizinlə əlaqə quracıyıq</button>
+                            </div>
+                            <div class="status pt-3">
+                                @if (TempData["contact"] != null)
+                                {
+                                    <div class="alert alert-info">@TempData["contact"]</div>
+                                }
+                            </div>
                         </form>
 
-                        <div class="text-center text-md-left">
-                            <button style="background-color:#0a2970; color:white" type="submit" name="Send" value="Send" class="btn mt-3" onclick="document.getElementById('contact-form').submit();">Tezliklə sizinlə əlaqə quracıyıq</button>
-                        </div>
                         <div class="status"></div>
                     </div>
-                    <!--Grid column-->
-                    <!--Grid column-->
                     <div class="col-md-5 text-center">
                         <ul class="list-unstyled mb-0 pt-5">
                             <li>
