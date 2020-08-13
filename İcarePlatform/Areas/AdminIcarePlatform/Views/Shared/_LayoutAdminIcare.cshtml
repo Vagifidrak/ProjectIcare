@@ -140,21 +140,24 @@
                                 Menyu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>İcarə Platforma Ümumi</a>
                                 <div id="submenu-1" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
-                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <a class="nav-link" href="index.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">İstifadəçilər</a>
                                             <div id="submenu-1-2" class="collapse submenu" style="">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="../ecommerce-product.html">Product List</a>
+                                                        <a class="nav-link" href="../ecommerce-product.html">Kirayəçilər</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="../ecommerce-product.html">Sahibkarlar</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="../dashboard-finance.html">Xidmətlər</a>
+                                            <a class="nav-link" href="../dashboard-finance.html">Əlaqə</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="../dashboard-sales.html">Haqqımızda</a>
@@ -242,7 +245,7 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="page-header">
-                            <h2 class="pageheader-title">Blank Pageheader </h2>
+                            <h2 class="pageheader-title">Icarə Platforma Ümumi</h2>
                             <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                             <div class="page-breadcrumb">
                                 <nav aria-label="breadcrumb">
@@ -272,13 +275,13 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            Bütün hüquqlar <a href="http://www.e-icare.az/" target="_blank" class="ml-1">e-icare.az</a>komandasına məxsusdur<.
+                            Bütün hüquqlar <a href="http://www.e-icare.az/" target="_blank" class="ml-1">e-icare.az</a>komandasına məxsusdur.
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                             <div class="text-md-right footer-links d-none d-sm-block">
-                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Haqqımızda</a>
                                 <a href="javascript: void(0);">Support</a>
-                                <a href="javascript: void(0);">Contact Us</a>
+                                <a href="javascript: void(0);">Əlaqə</a>
                             </div>
                         </div>
                     </div>
@@ -296,7 +299,9 @@
     <!-- end main wrapper -->
     <!-- ============================================================== -->
     <!-- Optional JavaScript -->
+
     <script src="~/Areas/AdminIcarePlatform/AdminPublicFront/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    @RenderSection("AdminJs", required:false)
     <script src="~/Areas/AdminIcarePlatform/AdminPublicFront/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="~/Areas/AdminIcarePlatform/AdminPublicFront/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <script src="~/Areas/AdminIcarePlatform/AdminPublicFront/assets/libs/js/main-js.js"></script>

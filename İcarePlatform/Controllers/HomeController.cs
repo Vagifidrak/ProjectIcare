@@ -1,4 +1,6 @@
-﻿using System;
+﻿using İcarePlatform.Models;
+using İcarePlatform.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +11,7 @@ namespace İcarePlatform.Controllers
 {
     public class HomeController : Controller
     {
+        IcareDBContext Db = new IcareDBContext();
         public ActionResult Index()
         {
             return View();
@@ -18,19 +21,24 @@ namespace İcarePlatform.Controllers
         {
             ViewBag.Message = "Haqqımızda";
 
-            return View();
+            HomeVM Vm = new HomeVM();
+            Vm.AboutUs = Db.AboutUs.First();
+            return View(Vm);
         }
         //Contact for information
         public ActionResult Contact()
         {
             ViewBag.Message = "Əlaqə";
 
-            return View();
+            HomeVM Vm = new HomeVM();
+            Vm.ContactMe = Db.ContactMes.First();
+            return View(Vm);
         }
         [HttpPost]
-        public ActionResult Contact(string name=null, string email = null, string subject=null, string message = null)
+        public ActionResult Contact(string name, string email, string subject, string message)
         {
-            if(name != null && email != null && message != null)
+            if(!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(message) && 
+               !string.IsNullOrEmpty(subject) )
             {
                 WebMail.SmtpServer = "mail.e-icare.az";
                 WebMail.EnableSsl = true;

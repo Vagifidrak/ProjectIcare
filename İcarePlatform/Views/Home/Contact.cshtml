@@ -1,4 +1,5 @@
-﻿@{
+﻿@model İcarePlatform.ViewModels.HomeVM
+@{
     ViewBag.Title = "Contact";
 }
 <div class="Contact">
@@ -11,7 +12,7 @@
                 <h2 style="color:#0a2970" class="h1-responsive font-weight-bold text-center my-4">Bizimlə Əlaqə</h2>
                 <!--Section description-->
                 <p style="font-weight:600; font-size:large" class="text-center w-responsive mx-auto mb-5">
-                    Hər hansı bir sualınız var? Xahiş edirik birbaşa bizimlə əlaqə saxlamaqdan çəkinməyin. Komandamız sizə kömək etmək üçün bir neçə saat ərzində geri qayıdır.
+                    Hər hansı bir sualınız var? Xahiş edirik birbaşa bizimlə əlaqə saxlamaqdan çəkinməyin. Komandamız sizə kömək etmək üçün ən qısa zamanda geri qayıdır.
                 </p>
                 <div class="row">
                     <div class="col-md-7 mb-md-0 mb-5">
@@ -46,9 +47,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center text-md-left">
-                                <button style="background-color:#0a2970; color:white" type="submit" name="nameSub" class="btn mt-3" onclick="document.getElementById('contact-form').submit();">Tezliklə sizinlə əlaqə quracıyıq</button>
-                            </div>
+
                             <div class="status pt-3">
                                 @if (TempData["contact"] != null)
                                 {
@@ -56,24 +55,26 @@
                                 }
                             </div>
                         </form>
-
-                        <div class="status"></div>
+                        <div class="text-center text-md-left">
+                            <button style="background-color:#0a2970; color:white" type="submit" name="nameSub" class="btn mt-3" onclick="document.getElementById('contact-form').submit();">Tezliklə sizinlə əlaqə quracıyıq</button>
+                        </div>
                     </div>
                     <div class="col-md-5 text-center">
                         <ul class="list-unstyled mb-0 pt-5">
                             <li>
                                 <i style="color:#0a2970" class="fas fa-map-marker-alt fa-2x"></i>
-                                <p>Bakı. Azərbaycan</p>
+                                <p>@Model.ContactMe.Office</p>
                             </li>
 
                             <li>
                                 <i style="color:#0a2970" class="fas fa-phone mt-4 fa-2x"></i>
-                                <p>+994 55 321 00 07</p>
+                                <p>@Model.ContactMe.Number</p>
+
                             </li>
 
                             <li>
                                 <i style="color:#0a2970" class="fas fa-envelope mt-4 fa-2x"></i>
-                                <p>vagifibra@gmail.com</p>
+                                <p>@Model.ContactMe.Email</p>
                             </li>
                         </ul>
                     </div>

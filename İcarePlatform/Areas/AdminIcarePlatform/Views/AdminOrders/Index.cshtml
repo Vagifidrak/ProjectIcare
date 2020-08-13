@@ -1,0 +1,63 @@
+﻿@model IEnumerable<İcarePlatform.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminIcarePlatform/Views/Shared/_LayoutAdminIcare.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-info table-responsive-lg">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsGuestOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PromoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlacedOn)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerFullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsGuestOrder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PromoId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacedOn)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>
