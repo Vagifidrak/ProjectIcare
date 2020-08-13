@@ -12,5 +12,6 @@ namespace İcarePlatform.ViewModels
         public ContactMe ContactMe { get; set; }
         public AspNetUser User { get; set; }
         public Order Orders { get; set; }
+        
     }
 }
