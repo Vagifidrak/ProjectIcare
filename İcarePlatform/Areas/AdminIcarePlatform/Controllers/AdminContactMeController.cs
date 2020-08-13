@@ -18,9 +18,7 @@ namespace İcarePlatform.Areas.AdminIcarePlatform.Controllers
         // GET: AdminIcarePlatform/AdminContactMe
         public ActionResult Index()
         {
-            HomeVM vm = new HomeVM();
-            vm.ContactMe = db.ContactMes.First();
-            return View(vm);
+            return View(db.ContactMes.ToList());
         }
 
         // GET: AdminIcarePlatform/AdminContactMe/Details/5
