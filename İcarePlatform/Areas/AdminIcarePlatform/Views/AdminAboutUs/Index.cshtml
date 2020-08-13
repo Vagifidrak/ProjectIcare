@@ -5,12 +5,8 @@
     Layout = "~/Areas/AdminIcarePlatform/Views/Shared/_LayoutAdminIcare.cshtml";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table table-striped table-responsive table-bordered second">
+<table class="table table-striped  table-responsive-lg table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.header)
@@ -25,7 +21,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Icon)
         </th>
-        <th></th>
+        <th>Sil.Düzəlt.Ətraflı məlumat</th>
     </tr>
 
 @foreach (var item in Model) {
@@ -51,3 +47,6 @@
 }
 
 </table>
+<p class="pt-3">
+    @Html.ActionLink("Create New", "Create")
+</p>

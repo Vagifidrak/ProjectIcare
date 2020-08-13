@@ -30,6 +30,9 @@
         <th>
             @Html.DisplayNameFor(model => model.PlacedOn)
         </th>
+        <th>
+            Sil.Düzəlt.Ətraflı məlumat
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -51,7 +54,7 @@
                 @Html.DisplayFor(modelItem => item.PromoId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PlacedOn)
+                @Html.DisplayFor(modelItem => item.PlacedOn) 
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

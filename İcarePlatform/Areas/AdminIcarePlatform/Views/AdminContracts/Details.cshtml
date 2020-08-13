@@ -1,0 +1,83 @@
+﻿@model İcarePlatform.Models.Contract
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/AdminIcarePlatform/Views/Shared/_LayoutAdminIcare.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Estate.EstateCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estate.EstateCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractLink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractLink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDeadline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContractDeadline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SignContract)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SignContract)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
