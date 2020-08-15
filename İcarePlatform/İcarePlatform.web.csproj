@@ -622,6 +622,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="PublicFront\Vendors\image\LogoShortcut.PNG" />
     <Content Include="PublicFront\Vendors\bootstrap\css\bootstrap-grid.css" />
     <Content Include="PublicFront\Vendors\bootstrap\css\bootstrap-grid.min.css" />
     <Content Include="PublicFront\Vendors\bootstrap\css\bootstrap-reboot.css" />

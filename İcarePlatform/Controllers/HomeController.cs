@@ -52,7 +52,7 @@ namespace İcarePlatform.Controllers
             {   
                 TempData["contact"] = "Xəta baş verdi təkrar yoxlayın";
             }
-            return View();
+            return RedirectToAction("Contact");
         }
     }
 }
