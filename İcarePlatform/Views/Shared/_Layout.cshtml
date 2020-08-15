@@ -14,10 +14,14 @@
     <!-- ============
     NabBar
     ============ -->
+
     <nav id="NavBar" class="resp-mobile">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-2">
+                    <img style="width:100%" src="~/PublicFront/Vendors/image/logo.png" alt="icare platform" />
+                </div> 
+                <div class="col-md-7">
                     <div class="MenuList">
                         <ul>
                             <li><a href="https://localhost:44375/Home/Index">Əsas səhifə</a></li>
@@ -28,7 +32,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="MenuEnter">
                         <ul>
                             <li><a href="https://localhost:44375/Account/Login">Giriş</a></li>
@@ -39,10 +43,19 @@
             </div>
         </div>
     </nav>
-    <div class="icon-bar float-right m-4">
-        <a href="#" onclick="barMenuOpenFunc()">
-            <i class="fas fa-bars fa-2x"></i>
-        </a>
+    <div class="icon-bar float-right">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img style="width:100%; margin-top:1rem" src="~/PublicFront/Vendors/image/logo.png" alt="Alternate Text" />
+                </div>
+                <div class="col-6">
+                    <a  href="#" onclick="barMenuOpenFunc()">
+                        <i style="margin-top: 1rem" class="fas fa-bars fa-2x d-flex justify-content-end"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="mobile-menu" id="menu-bar">
         <div>
@@ -50,6 +63,7 @@
                 <i class="fas fa-times fa-2x"></i>
             </a>
         </div>
+
         <div class="pt-5 mobile-menu-div">
             <ul class="mobile-menu-list">
                 <li><a href="https://localhost:44375/Account/Login">Giriş</a></li>
@@ -60,6 +74,12 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="https://localhost:44375/Home/Contact">Əlaqə</a></li>
             </ul>
+            <div class="sosialIcon d-flex justify-content-center">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/onlineicare/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/online-icare-a007b11b3/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://t.me/VagifIbra"><i class="fab fa-telegram"></i></a>
+            </div>
         </div>
     </div>
 

@@ -15,15 +15,19 @@
 .mobile-menu-div {
     display: none;
 }
+    .mobile-menu-div .sosialIcon a{
+        font-size:2em;
+        padding:5px;
+    }
 
-#NavBar .MenuList ul, #NavBar .MenuEnter ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-}
+    #NavBar .MenuList ul, #NavBar .MenuEnter ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end;
+    }
 
     #NavBar .MenuList ul li, #NavBar .MenuEnter ul li {
         list-style: none;
@@ -195,7 +199,7 @@ Responsive
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #191970;
+        background: #191970e3;
         transition: 0.5s;
         right: -100%;
         z-index: 1000;

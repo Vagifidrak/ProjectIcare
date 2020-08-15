@@ -666,6 +666,7 @@
     <Content Include="PublicFront\Vendors\image\phone.png" />
     <Content Include="PublicFront\Vendors\image\Programmer.svg" />
     <Content Include="PublicFront\Vendors\image\qq.jpg" />
+    <Content Include="PublicFront\Vendors\image\IconLogo.PNG" />
     <Content Include="PublicFront\Vendors\image\SmartKont.png" />
     <Content Include="PublicFront\Vendors\jQuery\jquery-3.4.1.min.js" />
     <Content Include="PublicFront\Vendors\Js\app.js" />
