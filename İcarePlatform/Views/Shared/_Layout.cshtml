@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="~/PublicFront/Vendors/Css/style.css">
     <link rel="stylesheet" href="~/PublicFront/Vendors/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="~/PublicFront/Vendors/font-awesome/css/all.css">
-    <link rel="shortcut icon" href="~/PublicFront/Vendors/image/LogoShortcut.PNG" />
 </head>
 
-<body>
+<body id="mob-version">
     <!-- ============
     NabBar
     ============ -->
-    <nav id="NavBar">
+    <nav id="NavBar" class="resp-mobile">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -40,6 +39,29 @@
             </div>
         </div>
     </nav>
+    <div class="icon-bar float-right m-4">
+        <a href="#" onclick="barMenuOpenFunc()">
+            <i class="fas fa-bars fa-2x"></i>
+        </a>
+    </div>
+    <div class="mobile-menu" id="menu-bar">
+        <div>
+            <a href="#" onclick="barMenuCloseFunc()" class="float-right m-4">
+                <i class="fas fa-times fa-2x"></i>
+            </a>
+        </div>
+        <div class="pt-5 mobile-menu-div">
+            <ul class="mobile-menu-list">
+                <li><a href="https://localhost:44375/Account/Login">Giriş</a></li>
+                <li><a href="https://localhost:44375/Account/Register">Qeydiyyat</a></li>
+                <li><a href="https://localhost:44375/Home/Index">Əsas səhifə</a></li>
+                <li><a href="#">Xidmətlər</a></li>
+                <li><a href="https://localhost:44375/Home/About">Haqqımızda</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="https://localhost:44375/Home/Contact">Əlaqə</a></li>
+            </ul>
+        </div>
+    </div>
 
     @RenderBody()
 
@@ -62,8 +84,9 @@
                         <a href="#"><img style="width:10%" src="~/PublicFront/Vendors/image/google.png" alt="Google-store"></a>
                     </div>
                 </div>
+                <img class="PhoneImg" src="~/PublicFront/Vendors/image/phone.png" alt="">
             </div>
-            <img class="PhoneImg" src="~/PublicFront/Vendors/image/phone.png" alt="">
+
         </section>
 
 
@@ -92,6 +115,7 @@
 
     <script src="~/PublicFront/Vendors/bootstrap/js/bootstrap.js"></script>
     <script src="~/PublicFront/Vendors/Js/app.js"></script>
+
 </body>
 
 </html>
