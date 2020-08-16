@@ -54,5 +54,13 @@ namespace İcarePlatform.Controllers
             }
             return RedirectToAction("Contact");
         }
+        public ActionResult Services()
+        {
+            return View();
+        }
+        public ActionResult FAQ()
+        {
+            return View();
+        }
     }
 }
